@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlipayEasySDK", "AlipayEasy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{79DE080D-34C1-485E-996D-435A8515766D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlipayEasySDK.Kernel", "AlipayEasySDK.Kernel\AlipayEasySDK.Kernel.csproj", "{DFACD1B1-05D4-425E-805F-ABA4F702B3D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{79DE080D-34C1-485E-996D-435A8515766D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79DE080D-34C1-485E-996D-435A8515766D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79DE080D-34C1-485E-996D-435A8515766D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFACD1B1-05D4-425E-805F-ABA4F702B3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFACD1B1-05D4-425E-805F-ABA4F702B3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFACD1B1-05D4-425E-805F-ABA4F702B3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFACD1B1-05D4-425E-805F-ABA4F702B3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
