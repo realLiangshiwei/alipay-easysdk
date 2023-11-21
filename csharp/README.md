@@ -1,5 +1,10 @@
-[![NuGet](https://badge.fury.io/nu/AlipayEasySDK.svg)](https://badge.fury.io/nu/AlipayEasySDK)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falipay%2Falipay-easysdk.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falipay%2Falipay-easysdk?ref=badge_shield)
+#
+
+Fork from https://github.com/alipay/alipay-easysdk/tree/master
+
+> Portable.BouncyCastle 1.9.0 NuGet package, that is replaced by BouncyCastle.Cryptography 2+
+
+* Replace Portable.BouncyCastle with BouncyCastle.Cryptography
 
 欢迎使用 Alipay **Easy** SDK for .NET 。
 

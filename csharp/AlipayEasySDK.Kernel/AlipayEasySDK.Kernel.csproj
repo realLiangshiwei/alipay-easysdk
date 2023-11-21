@@ -6,6 +6,16 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Alipay.EasySDK.Kernel</RootNamespace>
         <LangVersion>default</LangVersion>
+
+        <PackOnBuild>true</PackOnBuild>
+        <PackageVersion>2.1.5</PackageVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <PackageLicenseUrl>https://github.com/realLiangshiwei/alipay-easysdk/blob/master/LICENSE</PackageLicenseUrl>
+        <Description>Alipay Easy SDK for .NET allows you to enjoy a minimalist programming experience and quickly access the various high-frequency capabilities of the Alipay Open Platform.</Description>
+        <PackageId>LSW.AlipayEasySDK.Kernel</PackageId>
+        <PackageProjectUrl>https://github.com/realLiangshiwei/alipay-easysdk/tree/master/csharp</PackageProjectUrl>
+        <Summary>Alipay Easy SDK for .NET allows you to enjoy a minimalist programming experience and quickly access the various high-frequency capabilities of the Alipay Open Platform.</Summary>
+        <Title>Alipay Easy SDK</Title>
     </PropertyGroup>
 
     <ItemGroup>
