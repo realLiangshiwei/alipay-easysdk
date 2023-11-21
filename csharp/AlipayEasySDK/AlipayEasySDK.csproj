@@ -3,8 +3,9 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <PackOnBuild>true</PackOnBuild>
+    <Authors>liangshiwei</Authors>
+    <Owners>liangshiwei</Owners>
     <PackageVersion>2.1.5</PackageVersion>
-    <NeutralLanguage>zh</NeutralLanguage>
     <PackageLicenseUrl>https://github.com/realLiangshiwei/alipay-easysdk/blob/master/LICENSE</PackageLicenseUrl>
     <Description>Alipay Easy SDK for .NET allows you to enjoy a minimalist programming experience and quickly access the various high-frequency capabilities of the Alipay Open Platform.</Description>
     <PackageId>LSW.AlipayEasySDK</PackageId>
@@ -13,14 +14,6 @@
     <Title>Alipay Easy SDK</Title>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
-  </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Factory\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlipayEasySDK.Kernel\AlipayEasySDK.Kernel.csproj" />
   </ItemGroup>

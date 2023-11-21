@@ -2,49 +2,62 @@ using Newtonsoft.Json.Linq;
 
 namespace Alipay.EasySDK.Kernel.Util;
 
+/// <summary>
+/// 字典工具类
+/// </summary>
 public static class DictionaryUtil
 {
+    /// <summary>
+    /// 将字典各层次Value中的JObject和JArray转换成C#标准库中的Dictionary和List
+    /// </summary>
+    /// <param name="iputObj">输入字典</param>
+    /// <returns>转换后的输出字典</returns>
     public static Dictionary<string, object> ObjToDictionary(Dictionary<string, object> iputObj)
     {
-        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        Dictionary<string, object> result = new Dictionary<string, object>();
         foreach (string key in iputObj.Keys)
         {
             if (iputObj[key] is JArray)
             {
-                List<object> inputList = ((JToken) iputObj[key]).ToObject<List<object>>();
-                dictionary.Add(key, ConvertList(inputList));
+                List<object> objList = ((JArray)iputObj[key]).ToObject<List<object>>();
+                result.Add(key, ConvertList(objList));
             }
             else if (iputObj[key] is JObject)
             {
-                Dictionary<string, object> iputObj1 = ((JToken) iputObj[key]).ToObject<Dictionary<string, object>>();
-                dictionary.Add(key, ObjToDictionary(iputObj1));
+                Dictionary<string, object> dicObj = ((JObject)iputObj[key]).ToObject<Dictionary<string, object>>();
+                result.Add(key, ObjToDictionary(dicObj));
             }
             else
-                dictionary.Add(key, iputObj[key]);
+            {
+                result.Add(key, iputObj[key]);
+            }
         }
-        return dictionary;
+
+        return result;
     }
+
 
     private static List<object> ConvertList(List<object> inputList)
     {
-        List<object> objectList = new List<object>();
-        foreach (object input in inputList)
+        List<object> result = new List<object>();
+        foreach (var obj in inputList)
         {
-            switch (input)
+            if (obj is JArray)
             {
-                case JArray _:
-                    List<object> inputList1 = ((JToken) input).ToObject<List<object>>();
-                    objectList.Add((object) DictionaryUtil.ConvertList(inputList1));
-                    continue;
-                case JObject _:
-                    Dictionary<string, object> iputObj = ((JToken) input).ToObject<Dictionary<string, object>>();
-                    objectList.Add((object) DictionaryUtil.ObjToDictionary(iputObj));
-                    continue;
-                default:
-                    objectList.Add(input);
-                    continue;
+                List<object> listObj = ((JArray)obj).ToObject<List<object>>();
+                result.Add(ConvertList(listObj));
+            }
+            else if (obj is JObject)
+            {
+                Dictionary<string, object> dicObj = ((JObject)obj).ToObject<Dictionary<string, object>>();
+                result.Add(ObjToDictionary(dicObj));
+            }
+            else
+            {
+                result.Add(obj);
             }
         }
-        return objectList;
+
+        return result;
     }
 }
